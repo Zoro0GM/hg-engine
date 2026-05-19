@@ -7,9 +7,12 @@
 .open "build/trainer_text_map/7_0", 0
 
 _0000: // Trainer 0
+       // Trainer 1
        // Trainer 2
        // Trainer 3
-       // Trainer 11
+       // Trainer 4
+       // Trainer 5
+       // Trainer 6
        // Trainer 19
        // Trainer 40
        // Trainer 63
@@ -119,24 +122,6 @@ _0018: // Trainer 497
     trainertextentry 497, TEXT_LAST_MON_CRITICAL, "...Humph!\nYou’re doing OK for someone weak.\n"
     trainertextentry 497, TEXT_DEFEATED_IN_BATTLE, "...Humph!\nAre you happy you won?\n"
     trainertextentry 497, TEXT_PLAYER_LOSES, "...Humph!\nThat was a waste of time.\n"
-
-_0024: // Trainer 1
-    trainertextentry   1, TEXT_LAST_MON_SENT_OUT, "Say, you’ve got a lot of nerve,\ncoming here...\n"
-    trainertextentry   1, TEXT_LAST_MON_CRITICAL, "That’s ridiculous. There’s no way\nI could lose to a wimp like you!\n"
-    trainertextentry   1, TEXT_DEFEATED_IN_BATTLE, "...Humph!\nUseless Pokémon!\rListen, you. You won only because my\nPokémon were weak.\n"
-    trainertextentry   1, TEXT_PLAYER_LOSES, "...Humph!\nI knew you were lying.\n"
-
-_0034: // Trainer 266
-    trainertextentry 266, TEXT_LAST_MON_SENT_OUT, "Say, you’ve got a lot of nerve,\ncoming here...\n"
-    trainertextentry 266, TEXT_LAST_MON_CRITICAL, "That’s ridiculous. There’s no way\nI could lose to a wimp like you!\n"
-    trainertextentry 266, TEXT_DEFEATED_IN_BATTLE, "...Humph!\nUseless Pokémon!\rListen, you. You won only because my\nPokémon were weak.\n"
-    trainertextentry 266, TEXT_PLAYER_LOSES, "...Humph!\nI knew you were lying.\n"
-
-_0044: // Trainer 269
-    trainertextentry 269, TEXT_LAST_MON_SENT_OUT, "Say, you’ve got a lot of nerve,\ncoming here...\n"
-    trainertextentry 269, TEXT_LAST_MON_CRITICAL, "That’s ridiculous. There’s no way\nI could lose to a wimp like you!\n"
-    trainertextentry 269, TEXT_DEFEATED_IN_BATTLE, "...Humph!\nUseless Pokémon!\rListen, you. You won only because my\nPokémon were weak.\n"
-    trainertextentry 269, TEXT_PLAYER_LOSES, "...Humph!\nI knew you were lying.\n"
 
 _0054: // Trainer 263
     trainertextentry 263, TEXT_LAST_MON_SENT_OUT, "Out of desperation, weak people\nsometimes do OK at fighting back.\n"
@@ -323,14 +308,9 @@ _0218: // Trainer 50
     trainertextentry  50, TEXT_DEFEATED_IN_OVERWORLD, "Even though you’re a rookie Trainer,\nyou’re not bothered by these heights\fat all... You’re really something!\n"
 
 _0224: // Trainer 10
-    trainertextentry  10, TEXT_DOUBLE_NOTICE_IN_OVERWORLD_1, "Amy: Hey, are you challenging the\nLeader? No way!\r"
-    trainertextentry  10, TEXT_DOUBLE_DEFEATED_IN_BATTLE_1, "Amy: Oh, goodness!"
-    trainertextentry  10, TEXT_DOUBLE_DEFEATED_IN_OVERWORLD_1, "Amy: You’re really strong!"
-    trainertextentry  10, TEXT_DOUBLE_ONLY_1_POKEMON_1, "Amy: You have only one Pokémon?\nThat’s kind of lonely..."
-    trainertextentry  10, TEXT_DOUBLE_NOTICE_IN_OVERWORLD_2, "Mimi: If you insist, we’ll be\nyour opponents.\r"
-    trainertextentry  10, TEXT_DOUBLE_DEFEATED_IN_BATTLE_2, "Mimi: I’m feeling a bit dizzy...\n"
-    trainertextentry  10, TEXT_DOUBLE_DEFEATED_IN_OVERWORLD_2, "Mimi: Our bug Pokémon lost! Oh, what\na shame.\n"
-    trainertextentry  10, TEXT_DOUBLE_ONLY_1_POKEMON_2, "Mimi: It’s a little unfair to battle\nsomeone who has only one Pokémon.\n"
+    trainertextentry  10, TEXT_NOTICE_IN_OVERWORLD, "Fishing's been slow today...\nMaybe a battle will bring some luck!\r"
+    trainertextentry  10, TEXT_DEFEATED_IN_BATTLE, "Ah! You reeled me in!\n"
+    trainertextentry  10, TEXT_DEFEATED_IN_OVERWORLD, "Battles are like fishing.\rSometimes you win, sometimes\nthe big one gets away.\n"
 
 _0244: // Trainer 67
     trainertextentry  67, TEXT_NOTICE_IN_OVERWORLD, "Bug Pokémon evolve young. So they get\nstronger that much faster.\r"
@@ -356,11 +336,6 @@ _0274: // Trainer 71
     trainertextentry  71, TEXT_NOTICE_IN_OVERWORLD, "I like cute Pokémon better than\nstrong Pokémon.\rBut I have strong and cute Pokémon!\r"
     trainertextentry  71, TEXT_DEFEATED_IN_BATTLE, "Oh, no, no, no!\n"
     trainertextentry  71, TEXT_DEFEATED_IN_OVERWORLD, "I’m training really hard to try to beat\nWhitney, but I’m starting to get\fdiscouraged...\rWhat to do...\nWell... If I lose, I’ll just try harder\fnext time!\n"
-
-_0280: // Trainer 5
-    trainertextentry   5, TEXT_NOTICE_IN_OVERWORLD, "Oh, you are a cute little Trainer!\nI like you, but I won’t hold back!\r"
-    trainertextentry   5, TEXT_DEFEATED_IN_BATTLE, "Let’s see...\nOops, it’s over?\n"
-    trainertextentry   5, TEXT_DEFEATED_IN_OVERWORLD, "Wow, you must be good to beat me!\nKeep it up!\n"
 
 _028C: // Trainer 70
     trainertextentry  70, TEXT_NOTICE_IN_OVERWORLD, "Give it your best shot, or I’ll take\nyou down!\r"
@@ -1159,10 +1134,10 @@ _0A08: // Trainer 412
     trainertextentry 412, TEXT_DEFEATED_IN_OVERWORLD, "With your skills, you’ll do well at the\nPokémon League. That’s what my\fpremonition says.\n"
 
 _0A14: // Trainer 8
-    trainertextentry   8, TEXT_NOTICE_IN_OVERWORLD, "I just lost, so I’m trying to find\nmore Pokémon.\rWait! You look weak! Come on,\nlet’s battle!\r"
-    trainertextentry   8, TEXT_DEFEATED_IN_BATTLE, "Oh...\nI’m out of Pokémon that can fight.\n"
-    trainertextentry   8, TEXT_DEFEATED_IN_OVERWORLD, "I knew it--if you don’t have many\nPokémon, battles are harder!\fI need to catch more Pokémon!\n"
-    trainertextentry   8, TEXT_REMATCH_IN_OVERWORLD, "I’ve been waiting!\nLet’s battle now!\r"
+    trainertextentry   8, TEXT_NOTICE_IN_OVERWORLD, "Oh! Hi!\nWant to battle?\r"
+    trainertextentry   8, TEXT_DEFEATED_IN_BATTLE, "Ah! I didn’t react fast enough!\n"
+    trainertextentry   8, TEXT_DEFEATED_IN_OVERWORLD, "Sunkern needs a little more time.\nI believe in it.\n"
+    trainertextentry   8, TEXT_REMATCH_IN_OVERWORLD, "I’ve been training!\nLet’s try again!\r"
 
 _0A24: // Trainer 47
     trainertextentry  47, TEXT_NOTICE_IN_OVERWORLD, "You’re a Pokémon Trainer, right?\nThen you have to battle!\r"
@@ -1173,12 +1148,6 @@ _0A30: // Trainer 249
     trainertextentry 249, TEXT_NOTICE_IN_OVERWORLD, "Instead of a bug Pokémon, I found\na Trainer!\r"
     trainertextentry 249, TEXT_DEFEATED_IN_BATTLE, "Argh! You’re too strong!\n"
     trainertextentry 249, TEXT_DEFEATED_IN_OVERWORLD, "I ran out of Poké Balls while I was\ncatching Pokémon.\rI should’ve bought some more...\n"
-
-_0A3C: // Trainer 4
-    trainertextentry   4, TEXT_NOTICE_IN_OVERWORLD, "I caught a bunch of Pokémon.\nLet me battle with you!\r"
-    trainertextentry   4, TEXT_DEFEATED_IN_BATTLE, "Awwwww...\n"
-    trainertextentry   4, TEXT_DEFEATED_IN_OVERWORLD, "You can catch Pokémon even if you have\nsix with you.\rIf you catch one, it’ll go to your Box\nautomatically.\n"
-    trainertextentry   4, TEXT_REMATCH_IN_OVERWORLD, "I was waiting for you. Let’s battle!\r"
 
 _0A4C: // Trainer 383
     trainertextentry 383, TEXT_NOTICE_IN_OVERWORLD, "That Badge!\rIt’s from Violet City!\nYou beat Falkner?\r"
@@ -1260,11 +1229,6 @@ _0B04: // Trainer 65
     trainertextentry  65, TEXT_DEFEATED_IN_OVERWORLD, "You’re too strong to be a\npractice partner.\n"
     trainertextentry  65, TEXT_REMATCH_IN_OVERWORLD, "You’re here! You’re here! I’ve never\nhad a practice partner before!\r"
 
-_0B14: // Trainer 6
-    trainertextentry   6, TEXT_NOTICE_IN_OVERWORLD, "What’s with you?\nWhat are you doing?\r"
-    trainertextentry   6, TEXT_DEFEATED_IN_BATTLE, "You don’t have to worry about the night\nwhen you’re with strong Pokémon.\n"
-    trainertextentry   6, TEXT_DEFEATED_IN_OVERWORLD, "The group stealing other people’s\nPokémon seems to be growing lately.\fYou should be careful, too.\n"
-
 _0B20: // Trainer 62
     trainertextentry  62, TEXT_NOTICE_IN_OVERWORLD, "This is where I do my training!\r"
     trainertextentry  62, TEXT_DEFEATED_IN_BATTLE, "Whoa!\n"
@@ -1298,10 +1262,10 @@ _0B60: // Trainer 388
     trainertextentry 388, TEXT_REMATCH_IN_OVERWORLD, "I’ve been practicing breathing fire\nwhile waiting for you!\r"
 
 _0B70: // Trainer 7
-    trainertextentry   7, TEXT_NOTICE_IN_OVERWORLD, "Behold my dexterity and grace!\r"
-    trainertextentry   7, TEXT_DEFEATED_IN_BATTLE, "Whew! That was a jolt!\n"
-    trainertextentry   7, TEXT_DEFEATED_IN_OVERWORLD, "I was going to dazzle you with my prize\nPokémon. But your prowess\felectrified me!\n"
-    trainertextentry   7, TEXT_REMATCH_IN_OVERWORLD, "Yo! I’ve been waiting!\r"
+    trainertextentry   7, TEXT_NOTICE_IN_OVERWORLD, "My Bidoof’s really strong.\nI won’t lose!\r"
+    trainertextentry   7, TEXT_DEFEATED_IN_BATTLE, "No way... We practiced a lot!\n"
+    trainertextentry   7, TEXT_DEFEATED_IN_OVERWORLD, "Bidoof’s tougher than it looks.\nYou just caught us on a bad turn.\n"
+    trainertextentry   7, TEXT_REMATCH_IN_OVERWORLD, "We’ve been training every day.\nLet’s battle again!\r"
 
 _0B80: // Trainer 78
     trainertextentry  78, TEXT_NOTICE_IN_OVERWORLD, "I’ll go anywhere if bug Pokémon\nappear there.\r"
@@ -1409,9 +1373,9 @@ _0C80: // Trainer 86
     trainertextentry  86, TEXT_DEFEATED_IN_OVERWORLD, "Swimming exercises your entire body.\nIt’s healthy.\n"
 
 _0C8C: // Trainer 9
-    trainertextentry   9, TEXT_NOTICE_IN_OVERWORLD, "Are you going to Cianwood?\rHow about a quick battle first?\r"
-    trainertextentry   9, TEXT_DEFEATED_IN_BATTLE, "I lost that one!\n"
-    trainertextentry   9, TEXT_DEFEATED_IN_OVERWORLD, "I’d say I’m a better swimmer than you.\nYeah!\n"
+    trainertextentry   9, TEXT_NOTICE_IN_OVERWORLD, "You can’t sneak past my bug senses!\nBattle time!\r"
+    trainertextentry   9, TEXT_DEFEATED_IN_BATTLE, "My bugs…! Hang in there!\n"
+    trainertextentry   9, TEXT_DEFEATED_IN_OVERWORLD, "Bug Pokémon grow fast if you care for\nthem.\rI just need a little more time.\n"
 
 _0C98: // Trainer 85
     trainertextentry  85, TEXT_NOTICE_IN_OVERWORLD, "No inflatable tube for me.\nI’m hanging on to a sea Pokémon!\r"
@@ -2644,8 +2608,10 @@ _184C: // Trainer 732
 _1858: // Trainer 733
     trainertextentry 733, TEXT_DEFEATED_IN_BATTLE, "Did you see that, Clair?\n"
 
-_185C: // Trainer 734
-    trainertextentry 734, TEXT_DEFEATED_IN_BATTLE, "Oh, I see...\n"
+_185C: // Trainer 11
+    trainertextentry  11, TEXT_NOTICE_IN_OVERWORLD, ""
+    trainertextentry  11, TEXT_DEFEATED_IN_BATTLE, ""
+    trainertextentry  11, TEXT_DEFEATED_IN_OVERWORLD, ""
 
 _1860: // Trainer 679
     trainertextentry 679, TEXT_NOTICE_IN_OVERWORLD, "Oh, you are a cute little Trainer!\nWhy don’t you battle me?\r"
@@ -3101,17 +3067,17 @@ _1AD0: // Trainer 630
 .create "build/trainer_text_offsets/1_0", 0
 
 /* Trainer   0 */ .halfword _0000
-/* Trainer   1 */ .halfword _0024
+/* Trainer   1 */ .halfword _0000
 /* Trainer   2 */ .halfword _0000
 /* Trainer   3 */ .halfword _0000
-/* Trainer   4 */ .halfword _0A3C
-/* Trainer   5 */ .halfword _0280
-/* Trainer   6 */ .halfword _0B14
+/* Trainer   4 */ .halfword _0000
+/* Trainer   5 */ .halfword _0000
+/* Trainer   6 */ .halfword _0000
 /* Trainer   7 */ .halfword _0B70
 /* Trainer   8 */ .halfword _0A14
 /* Trainer   9 */ .halfword _0C8C
 /* Trainer  10 */ .halfword _0224
-/* Trainer  11 */ .halfword _0000
+/* Trainer  11 */ .halfword _185C
 /* Trainer  12 */ .halfword _1218
 /* Trainer  13 */ .halfword _1230
 /* Trainer  14 */ .halfword _1370
@@ -3366,10 +3332,10 @@ _1AD0: // Trainer 630
 /* Trainer 263 */ .halfword _0054
 /* Trainer 264 */ .halfword _00B4
 /* Trainer 265 */ .halfword _0000
-/* Trainer 266 */ .halfword _0034
+/* Trainer 266 */ .halfword _0000
 /* Trainer 267 */ .halfword _0064
 /* Trainer 268 */ .halfword _00C4
-/* Trainer 269 */ .halfword _0044
+/* Trainer 269 */ .halfword _0000
 /* Trainer 270 */ .halfword _0074
 /* Trainer 271 */ .halfword _00A4
 /* Trainer 272 */ .halfword _00D4
@@ -3834,6 +3800,6 @@ _1AD0: // Trainer 630
 /* Trainer 731 */ .halfword _1840
 /* Trainer 732 */ .halfword _184C
 /* Trainer 733 */ .halfword _1858
-/* Trainer 734 */ .halfword _185C
+/* Trainer 734 */ .halfword _0000
 
 .close

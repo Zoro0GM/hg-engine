@@ -87,7 +87,7 @@ scrdef scr_seq_0003_069
 scrdef scr_seq_0003_070
 scrdef scr_seq_0003_071
 scrdef scr_seq_0003_072_repels
-scrdef scr_seq_0003_073_autobattle_testing
+scrdef scr_seq_0003_074
 scrdef_end
 
 scr_seq_0003_002:
@@ -662,14 +662,14 @@ _085F:
 
 _0892:
     buffer_players_name 0
-    buffer_item_name_indef 1, VAR_SPECIAL_x8004
+    buffer_item_name 1, VAR_SPECIAL_x8004
     npc_msg 28
     goto _08C9
 
 _08A3:
     compare VAR_SPECIAL_x8005, 1
     goto_if_gt _08BB
-    buffer_item_name_indef 0, VAR_SPECIAL_x8004
+    buffer_item_name 0, VAR_SPECIAL_x8004
     goto _08C0
 
 _08BB:
@@ -889,7 +889,7 @@ _0C23:
     npc_msg 36
     goto _0C33
 
-_0C33:
+_0C33:  
     call _0CA7
 _0C39:
     scrcmd_616 VAR_TEMP_x4000
@@ -897,7 +897,6 @@ _0C39:
     goto_if_ne _0C72
     menu_exec
     switch VAR_SPECIAL_RESULT
-    case 0, _0CEC
     case 1, _0D3A
     goto _0A2E
 
@@ -911,7 +910,6 @@ _0C72:
 
 _0CA7:
     menu_init_std_gmm 1, 1, 0, 1, VAR_SPECIAL_RESULT
-    menu_item_add 73, 82, 0
     menu_item_add 74, 83, 1
     scrcmd_616 VAR_TEMP_x4000
     compare VAR_TEMP_x4000, 0
@@ -1236,7 +1234,7 @@ scr_seq_0003_019:
     end
 
 scr_seq_0003_020:
-    hasitem ITEM_BIKE, 1, VAR_SPECIAL_RESULT
+    hasitem ITEM_BICYCLE, 1, VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _1163
     scrcmd_609
@@ -1732,15 +1730,127 @@ scr_seq_0003_064:
     releaseall
     end
 
-scr_seq_0003_073_autobattle_testing:
+scr_seq_0003_074:
     play_se SEQ_SE_DP_SELECT
-    lockall
-    npc_msg 120
+	LockAll
+	Message 120
+	ShowMoney 20, 2
+    goto scr_seq_0003_075
+
+scr_seq_0003_075:
+    touchscreen_menu_hide
+    menu_init_std_gmm 1, 1, 0, 1, 0x8000
+    menu_item_add 209, 255, 0
+    menu_item_add 210, 255, 1
+    menu_item_add 211, 255, 2
+    menu_item_add 212, 255, 3
+    menu_exec
+    touchscreen_menu_show
+	SetVarFromVariable 0x8008, 0x8000
+	CompareVarValue 0x8008, 0
+    goto_if_eq scr_seq_0003_076
+    CompareVarValue 0x8008, 1
+    goto_if_eq scr_seq_0003_077
+    CompareVarValue 0x8008, 2
+    goto_if_eq scr_seq_0003_078
+    Message 124
+    goto scr_seq_0003_079
+
+scr_seq_0003_076:
+    setvar VAR_SPECIAL_x8001, 30
+    goto scr_seq_0003_080
+
+scr_seq_0003_077:
+    setvar VAR_SPECIAL_x8001, 31
+    goto scr_seq_0003_080
+
+scr_seq_0003_078:
+    setvar VAR_SPECIAL_x8001, 32
+    goto scr_seq_0003_080
+
+scr_seq_0003_079:
+    WaitButton
     closemsg
-    trainer_battle 1, 0, 0, 0
-    releaseall
+    HideMoney
+	releaseall
     end
 
+scr_seq_0003_080:
+    compare VAR_SPECIAL_x8000, 0
+    call_if_eq scr_seq_0003_081
+    compare VAR_SPECIAL_x8000, 1
+    call_if_eq scr_seq_0003_082
+    compare VAR_SPECIAL_x8000, 2
+    call_if_eq scr_seq_0003_083
+	CompareVarValue 0x800C, 0
+    call_if_eq scr_seq_0003_084
+    CheckItemSpace 0x8001, 1, 0x800C
+	CompareVarValue 0x800C, 0
+    call_if_eq scr_seq_0003_085
+    compare VAR_SPECIAL_x8000, 0
+    call_if_eq scr_seq_0003_086
+    compare VAR_SPECIAL_x8000, 1
+    call_if_eq scr_seq_0003_087
+    compare VAR_SPECIAL_x8000, 2
+    call_if_eq scr_seq_0003_088
+    UpdateMoney
+    TextItem 0, 0x8001
+    play_se SEQ_SE_DP_JIHANKI
+    TextItem 0, 0x8001
+    Message 121
+    SetVarFromVariable 0x8004, 0x8001
+    SetVar 0x8005, 1
+	CommonScript 2033
+	GetRandom 0x800C, 64
+	CompareVarValue 0x800C, 0
+    goto_if_ne scr_seq_0003_089
+    play_se SEQ_SE_DP_JIHANKI
+	TextItem 0, 0x8001
+	Message 122
+	CheckItemSpace 0x8001, 1, 0x800C
+	CompareVarValue 0x800C, 0
+    goto_if_eq scr_seq_0003_085
+	CommonScript 2033
+	Message 120
+    goto scr_seq_0003_075
 
+scr_seq_0003_081:
+    CompareMoney 0x800C, 200
+    return
+
+scr_seq_0003_082:
+	CompareMoney 0x800C, 300
+    return
+
+scr_seq_0003_083:
+	CompareMoney 0x800C, 350
+    return
+
+scr_seq_0003_084:
+	Message 8
+    goto scr_seq_0003_079
+
+scr_seq_0003_085:
+	CommonScript 2009
+	CloseMessage
+	HideMoney
+	releaseall
+    end
+
+scr_seq_0003_086:
+	TakeMoney 200
+    return
+
+scr_seq_0003_087:
+	TakeMoney 300
+    return
+
+scr_seq_0003_088:
+	TakeMoney 350
+    return
+
+scr_seq_0003_089:
+	Message 120
+    goto scr_seq_0003_075
 
 .close
