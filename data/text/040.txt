@@ -117,5 +117,9 @@ WHEN YOU’RE #1
 NOT TELLING
 
 The repellent’s effect wore off!\nWould you like to use another one?
-You used the {STRVAR_1 8, 1, 0}.
-Begin auto-battle.
+{STRVAR_1 3, 0, 0} used the {STRVAR_1 8, 1, 0}.
+It’s a vending machine.\nWhich drink would you like? {YESNO 0}
+Clang!\rA can of {STRVAR_1 8, 0, 0} dropped down.\r
+Clang!\rBonus! Another can of {STRVAR_1 8, 0, 0}\ndropped down.\r
+Not enough money...
+Decided not to buy a drink.
