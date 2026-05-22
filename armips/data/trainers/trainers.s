@@ -8051,7 +8051,7 @@ trainerdata 253, "Brock"
 
 trainerdata 254, "Misty"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
-    trainerclass TRAINERCLASS_LEADER_MISTY
+    trainerclass TRAINERCLASS_RIVAL_LUCY
     nummons 4
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
@@ -8113,7 +8113,7 @@ trainerdata 254, "Misty"
 
 trainerdata 255, "Lt. Surge"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
-    trainerclass TRAINERCLASS_LEADER_LT_SURGE
+    trainerclass TRAINERCLASS_RIVAL_FINN
     nummons 5
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
@@ -24870,7 +24870,7 @@ trainerdata 720, "Brock"
 
 trainerdata 721, "Misty"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
-    trainerclass TRAINERCLASS_LEADER_MISTY
+    trainerclass TRAINERCLASS_RIVAL_LUCY
     nummons 6
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
@@ -24956,7 +24956,7 @@ trainerdata 721, "Misty"
 
 trainerdata 722, "Lt. Surge"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
-    trainerclass TRAINERCLASS_LEADER_LT_SURGE
+    trainerclass TRAINERCLASS_RIVAL_FINN
     nummons 6
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE

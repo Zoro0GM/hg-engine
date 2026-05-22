@@ -798,8 +798,6 @@ _0C2F:
 	goto_if_defeated VAR_SPECIAL_x8006, _0C7F
 	scrcmd_317 1
 	call _0D9F
-	compare VAR_SPECIAL_RESULT, 1
-	call_if_eq _0DCF
 	settrainerflag VAR_TEMP_x4012
 	releaseall
 	end
@@ -889,40 +887,23 @@ _0D9F:
 	check_registered_phone_number VAR_TEMP_x4010, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _0DC7
-	setvar VAR_SPECIAL_RESULT, 1
 	return
 
 _0DC7:
-	setvar VAR_SPECIAL_RESULT, 0
 	return
 
 _0DCF:
-	get_phone_contact_msg_ids 0, VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
-	msgbox_extern VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	goto _0DF9
 	end
 
 _0DE4:
-	get_phone_contact_msg_ids 3, VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	msgbox_extern VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	goto _0DF9
 	end
 
 _0DF9:
-	touchscreen_menu_hide
-	getmenuchoice VAR_SPECIAL_RESULT
-	touchscreen_menu_show
-	compare VAR_SPECIAL_RESULT, 0
-	goto_if_ne _0E28
-	play_fanfare SEQ_ME_POKEGEAR_REGIST
-	wait_fanfare
-	npc_msg 101
-	get_phone_contact_msg_ids 1, VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
-	register_gear_number VAR_TEMP_x4010
 	goto _0E2F
 
-_0E28:
-	get_phone_contact_msg_ids 2, VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 _0E2F:
 	msgbox_extern VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	wait_button
